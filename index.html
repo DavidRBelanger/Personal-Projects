@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NBA Search Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <input id="inputField" type="text" placeholder="Search Player...">
+    <button onclick="getPlayers()">Click me</button>
+    <script>
+        function getPlayers() {
+            var player;
+            var list = document.getElementById("p");
+            var content = "";
+            var a = document.getElementById('inputField');
+            fetch('https://www.balldontlie.io/api/v1/players/' + a.textContent)
+                .then(response => response.json())
+                .then(data => {
+                    content += first_name;
+                    content += last_name;
+                    content += id;
+
+                })
+                list.innerHTML = content;
+        }
+    </script>
+    <p></p>
+</body>
+
+</html>
