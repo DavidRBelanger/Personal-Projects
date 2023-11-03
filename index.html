@@ -22,9 +22,9 @@
             fetch('https://www.balldontlie.io/api/v1/players/' + a.textContent)
                 .then(response => response.json())
                 .then(data => {
-                    content += first_name;
-                    content += last_name;
-                    content += id;
+                    content += data.first_name;
+                    content += data.last_name;
+                    content += data.id;
 
                 })
                 list.innerHTML = content;
