@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const website = "https://www.balldontlie.io/api/v1/";
+        let page = 1
+        let players = []
+
+        const getPlayers = () => {
+            fetch(website + `players?page=${page}`)
+                .then(response => response.json())
+                .then(data => {
+                    players = players.concat(data.data)
+                    if (data.meta.next_page < 59) {
+                        page++
+                        getPlayers()
+                    } else {
+                        console.log(players)
+                    }
+                })
+        }
+
+    </script>
+    <input type="text" id="inputField" name="inputField"><br><br> 
+    <button onclick="getPlayers()">Click</button>
+    <p id="playerList"></p>
+</body>
+
+</html>
