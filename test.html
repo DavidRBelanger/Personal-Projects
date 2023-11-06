@@ -9,27 +9,27 @@
 
 <body>
     <script>
+        var list = [];
+        var page = 1;
         const website = "https://www.balldontlie.io/api/v1/";
-        let page = 1
-        let players = []
 
-        const getPlayers = () => {
-            fetch(website + `players?page=${page}`)
+        function getPlayer(name) {
+            fetch(website + `players?per_page=100&search=${name}`)
                 .then(response => response.json())
-                .then(data => {
-                    players = players.concat(data.data)
-                    if (data.meta.next_page < 59) {
-                        page++
-                        getPlayers()
-                    } else {
-                        console.log(players)
-                    }
+                .then(data=>{
+                    list = list.concat(data.data)
+                    console.log(list)
+                    console.log(list[0].data.first_name);
                 })
+            
+
+            list = [];
+            
         }
 
     </script>
-    <input type="text" id="inputField" name="inputField"><br><br> 
-    <button onclick="getPlayers()">Click</button>
+    <input type="text" id="inputField" name="inputField"><br><br>
+    <button onclick="getPlayer(document.getElementById('inputField').value)">Click</button>
     <p id="playerList"></p>
 </body>
 
