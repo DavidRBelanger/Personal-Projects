@@ -19,11 +19,9 @@
                 .then(data=>{
                     list = list.concat(data.data)
                     console.log(list)
-                    console.log(list[0].data.first_name);
+                    console.log(data.data[0].id) //THIS IS HOW YOU GET THE PLAYER DATA.
                 })
-            
 
-            list = [];
             
         }
 
