@@ -34,13 +34,31 @@ h1 {
   align-self: center;
   border-radius: 40px;
   box-shadow: 0px 0px 20px 5px black;
+  overflow-y:scroll;
+}
+#container::-webkit-scrollbar {
+  width:0px;               /* width of the entire scrollbar */
+}
+
+#container::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+#container::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid orange;  /* creates padding around scroll thumb */
 }
 
 header {
   padding: 2rem 1rem;
   max-width: 800px;
-  width: 100%;
+  width: 26.5%;
   margin: 0 auto;
+  position: fixed;
+  background-color: var(--darker);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 header h1 {
@@ -69,7 +87,7 @@ button {
   border-radius: 1rem;
   margin-right: 1rem;
   color: var(--light);
-  font-size: 1.25rem;
+  font-size: 2vh;
   box-shadow: 0px 0px 10px 2px black;
 }
 
@@ -81,7 +99,7 @@ button {
   background-color: var(--orange);
   border-radius: 20px;
   color: var(--dark);
-  font-size: 1.25rem;
+  font-size: 2vh;
   font-weight: 700;
   cursor: pointer;
   transition: 0.4s;
@@ -101,6 +119,7 @@ main {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 120px;
 }
 
 .task-list {
@@ -108,7 +127,7 @@ main {
 }
 
 .task-list h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
   color: var(--grey);
   margin-bottom: 1rem;
@@ -130,7 +149,7 @@ main {
 
 .task .content .text {
   color: var(--light);
-  font-size: 1.125rem;
+  font-size: 1rem;
   width: 100%;
   display: block;
   transition: 0.4s;
@@ -190,6 +209,8 @@ main {
   }
   main {
 	height: 50vh;
+  margin-top: 0px;
+  padding-left: 20px;
   }
   #new-task-form {
 	top: auto;
@@ -207,5 +228,8 @@ main {
   }
   #new-task-submit {
     font-size: 1em;
+  }
+  header {
+    background-color: transparent;
   }
 }
