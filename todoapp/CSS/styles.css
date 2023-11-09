@@ -29,8 +29,9 @@ h1 {
 #container {
   margin-top: 10vh;
   background-color: var(--dark);
-  width: 50vh;
+  width: 100vh;
   min-height: 80vh;
+  max-height: 80vh;
   align-self: center;
   border-radius: 40px;
   box-shadow: 0px 0px 20px 5px black;
@@ -53,7 +54,7 @@ h1 {
 header {
   padding: 2rem 1rem;
   max-width: 800px;
-  width: 26.5%;
+  width: 100vh;
   margin: 0 auto;
   position: fixed;
   background-color: var(--darker);
@@ -87,7 +88,7 @@ button {
   border-radius: 1rem;
   margin-right: 1rem;
   color: var(--light);
-  font-size: 2vh;
+  font-size: 2.5vh;
   box-shadow: 0px 0px 10px 2px black;
 }
 
@@ -99,11 +100,12 @@ button {
   background-color: var(--orange);
   border-radius: 20px;
   color: var(--dark);
-  font-size: 2vh;
+  font-size: 2.5vh;
   font-weight: 700;
   cursor: pointer;
   transition: 0.4s;
   box-shadow: 0px 0px 10px 2px black;
+  padding: 10px;
 }
 
 #new-task-submit:hover {
@@ -166,8 +168,8 @@ main {
 
 .task .actions button {
   cursor: pointer;
-  margin: 0 0.5rem;
-  font-size: 1.125rem;
+  margin: 0 0.25rem;
+  font-size: .8rem;
   font-weight: 700;
   text-transform: uppercase;
   transition: 0.4s;
@@ -203,12 +205,14 @@ main {
   #container {
     box-shadow: 0px 0px 0px 0px;
     padding: 10px;
+    width: 100%;
   }
   body {
     background-color: var(--dark);
   }
   main {
-	height: 50vh;
+	  margin-top: 10px; 
+    height: 50vh;
   }
   #new-task-form {
 	top: auto;
@@ -230,4 +234,6 @@ main {
   header {
     background-color: transparent;
   }
+
+  
 }
