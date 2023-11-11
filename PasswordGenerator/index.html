@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="checkbox">
+            <label class="switch">
+                <input type="checkbox" id="upperCaseSwitch">
+                <span class="slider round"></span>
+            </label>
+            <h3>UpperCase Letter</h3>
+        </div>
+        <div class="checkbox">
+            <label class="switch">
+                <input type="checkbox" id="lowerCaseSwitch">
+                <span class="slider round"></span>
+            </label>
+            <h3>LowerCase Letter</h3>
+        </div>
+        <div class="checkbox">
+            <label class="switch">
+                <input type="checkbox" id="numberSwitch">
+                <span class="slider round"></span>
+            </label>
+            <h3>Number</h3>
+        </div>
+        <div class="checkbox">
+            <label class="switch">
+                <input type="checkbox" id="specialSwitch">
+                <span class="slider round"></span>
+            </label>
+            <h3>Special Character</h3>
+        </div>
+        <div id="sliderBox">
+            <h4>4</h4>
+            <input type="range" min="4" max="25" value="15" id="lengthSlider">
+            <h4>25</h4>
+        </div>
+        <label id="sliderValue">Length: 15</label>
+        <div class="inputForm">
+            <button onclick="generatePassword()" id="generateButton">Generate</button>
+        </div>
+
+        <div id="output">
+            <input id="outputText" placeholder="Password..."></h2>
+            <button onclick="copyToClipboard()" id="copyButton">Copy</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

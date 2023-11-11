@@ -1,0 +1,165 @@
+:root {
+  --lightest: #faf5f8;
+  --lighter: #e0d8dd;
+  --light: #b4d0f6;
+  --dark: #7bb2ec;
+  --darker: #0a15ad;
+  --darkest: #080f76;
+}
+
+body {
+  background-color: var(--lighter);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  width: 60%;
+  margin: auto;
+  margin-top: 200px;
+  text-align: center;
+}
+
+.checkbox {
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  width: 60%;
+  background-color: var(--lightest);
+  align-items: center;
+  margin: 10px auto;
+  box-shadow: 0px 0px 5px 0.2px black;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox h3 {
+  margin: 10px;
+  font-weight: 100;
+  color: black;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  background-color: var(--darker);
+  color: var(--lightest);
+  font-size: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 0.5px black;
+}
+
+
+#output button {
+    font-size: 10px;
+    margin: 0px auto;
+}
+#sliderBox {
+  display: flex;
+  background-color: var(--lightest);
+  margin: 10px auto;
+  padding: 10px;
+  width: 60%;
+  border-radius: 5px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between; /* Spread items horizontally */
+  box-shadow: 0px 0px 5px .2px black;
+}
+
+#sliderBox input[type="range"] {
+  width: 90%;
+  cursor: pointer;
+}
+
+#sliderBox h4 {
+  margin: 0px;
+}
+
+#sliderLabel {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333; 
+}
+
+#sliderValue {
+  font-size: 20px;
+}
+
+#output {
+    align-items: center;
+    margin: 20px auto;
+    background-color: var(--lightest);
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px .2px black;
+    padding: 40px;
+}
+
+#output input {
+    font-size: 20px;
+    border: 0px;
+    background-color: var(--lightest);
+    text-align: center;
+    width: 100%;
+}
+
+.switch { /* Following code was inspired by W3Schools! Great tutorial for Toggle buttons */
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
