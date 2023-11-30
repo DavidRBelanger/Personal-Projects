@@ -15,7 +15,7 @@ body {
 #container {
   width: 60%;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 1vh;
   text-align: center;
 }
 
@@ -123,6 +123,7 @@ button {
 }
 
 .slider {
+  transition: 0.4s;
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -132,6 +133,7 @@ button {
   background-color: #ccc;
   transition: 0.4s;
 }
+
 
 .slider:before {
   position: absolute;
@@ -162,4 +164,15 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+#generateButton:hover {
+  transition: 0.4s;
+  background-color: var(--light);
+  color: black;
+}
+
+#generateButton {
+  transition: 0.4s;
 }
